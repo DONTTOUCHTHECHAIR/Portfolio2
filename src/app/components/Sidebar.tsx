@@ -45,31 +45,40 @@ export function Sidebar() {
 
   return (
     <nav
-      className={`fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block transition-opacity duration-300 ${
+      className={`fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
-    <div className="bg-white p-4 rounded-lg shadow-md border border-slate-200">
-      <ul className="space-y-6">
+      <ul className="relative space-y-6">
+        {/* Vertical connecting line - spans full height */}
+        <div className="absolute left-[7px] top-2 bottom-2 w-px bg-slate-300"></div>
+        
         {navItems.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} className="relative">
             <button
               onClick={() => scrollToSection(item.id)}
               className="group flex items-center gap-3 cursor-pointer"
               aria-label={`Navigate to ${item.label}`}
             >
-              <div
-                className={`h-px transition-all ${
-                  activeSection === item.id
-                    ? 'w-16 bg-blue-600'
-                    : 'w-8 bg-slate-400 group-hover:w-12 group-hover:bg-blue-500'
-                }`}
-              />
+              {/* Dot indicator with backdrop */}
+              <div className="relative z-10 flex items-center justify-center">
+                {/* Backdrop circle for visibility on any background */}
+                <div className="absolute size-7 rounded-full bg-white/90 backdrop-blur-sm shadow-sm"></div>
+                <div
+                  className={`relative size-4 rounded-full border-2 transition-all ${
+                    activeSection === item.id
+                      ? 'bg-blue-600 border-blue-600 scale-110'
+                      : 'bg-white border-slate-400 group-hover:border-blue-500 group-hover:scale-105'
+                  }`}
+                />
+              </div>
+              
+              {/* Label - only shows on hover or when active */}
               <span
-                className={`text-sm transition-colors ${
+                className={`text-sm whitespace-nowrap transition-all bg-white/90 backdrop-blur-sm px-2 py-1 rounded shadow-sm ${
                   activeSection === item.id
-                    ? 'text-blue-600 font-medium'
-                    : 'text-slate-600 group-hover:text-blue-500'
+                    ? 'opacity-100 text-blue-600 font-medium translate-x-0'
+                    : 'opacity-0 text-slate-600 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0'
                 }`}
               >
                 {item.label}
@@ -78,7 +87,6 @@ export function Sidebar() {
           </li>
         ))}
       </ul>
-    </div>
     </nav>
   );
 }

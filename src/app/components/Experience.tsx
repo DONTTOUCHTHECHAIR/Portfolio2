@@ -6,17 +6,17 @@ const experiences = [
   {
     id: 1,
     title: "Software Engineering Intern",
-    company: "Tech Solutions Inc.",
-    location: "San Francisco, CA",
-    period: "Jun 2025 - Aug 2025",
-    description: "Developed and maintained full-stack web applications using React and Node.js. Collaborated with cross-functional teams to implement new features and optimize existing functionality.",
+    company: "Mosaic Automation",
+    location: "Remote",
+    period: "Jun 2025 - Jan 2026",
+    description: "Worked on migrating legacy codebase to modern frameworks and automating usage of financial tools.",
     achievements: [
-      "Improved application performance by 30% through code optimization",
-      "Built RESTful APIs serving 10,000+ daily requests",
-      "Mentored 2 junior developers on best practices"
+      "Organized company code into a Git repository",
+      "Translated EasyLanguage code into Pinescript for TradingView",
+      "Refactored and optimized unnecessary code, improving performance and maintainability"
     ]
   },
-  {
+  /*{   EXAMPLES
     id: 2,
     title: "Research Assistant",
     company: "University Machine Learning Lab",
@@ -41,7 +41,7 @@ const experiences = [
       "Designed interactive coding exercises and tutorials",
       "Received 4.8/5.0 student feedback rating"
     ]
-  }
+  }*/
 ];
 
 export function Experience() {

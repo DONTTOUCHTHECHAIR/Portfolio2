@@ -1,51 +1,52 @@
 // tree of experiences connecting to the sidebar and archive link at the bottom
 
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { siGithub, siGitlab } from 'simple-icons';
 import { Button } from './ui/button';
 
 const projects = [
   {
     id: 1,
-    title: "AI-Powered Task Manager",
-    description: "A smart task management application that uses machine learning to prioritize tasks and predict completion times. Built with React, Node.js, and TensorFlow.js.",
-    tags: ["React", "Node.js", "TensorFlow.js", "MongoDB"],
-    github: "#",
-    demo: "#",
-    period: "Feb 2025 - Present"
+    title: "Financial Machine Learning Toolkit",
+    description: "A research project about the feasability of using machine learning on time series market data to detect patterns and make predictions.",
+    tags: ["Deep Learning", "PyTorch", "Forecasting", "Python"],
+    //github: "#",
+    //demo: "#",
+    period: "Jul 2022 - Present"
   },
   {
     id: 2,
-    title: "Real-Time Collaborative Code Editor",
-    description: "A web-based code editor enabling real-time collaboration with syntax highlighting, live cursors, and integrated chat. Supports multiple programming languages.",
-    tags: ["TypeScript", "WebSockets", "Monaco Editor", "Redis"],
-    github: "#",
-    demo: "#",
-    period: "Dec 2024 - Jan 2025"
+    title: "Portfolio Website",
+    description: "New version of my personal portfolio website, built with React and Tailwind CSS. Features improved design and automatic deployment to my home server.",
+    tags: ["React", "Tailwind CSS", "Docker", "TypeScript", "Figma", "Full Stack"],
+    github: "https://github.com/DONTTOUCHTHECHAIR/Portfolio2",
+    period: "Feb 2026 - Present"
   },
   {
     id: 3,
-    title: "Computer Vision Object Detection",
-    description: "Deep learning model for real-time object detection in video streams. Achieved 89% mAP on custom dataset with optimized inference speed.",
-    tags: ["Python", "PyTorch", "OpenCV", "YOLO"],
-    github: "#",
-    period: "Oct 2024 - Nov 2024"
+    title: "Training Job Manager",
+    description: "A web-based platform designed to manage machine learning training jobs through a queue and worker system.",
+    tags: ["Full Stack", "AWS", "Docker", "Production", "FastAPI", "Vercel"],
+    github: "https://github.com/DONTTOUCHTHECHAIR/Training-Job-Manager",
+    //demo: "#",
+    period: "Jul 2025"
   },
   {
     id: 4,
-    title: "Distributed File Storage System",
-    description: "Scalable file storage system with data redundancy and fault tolerance. Implements consistent hashing for load balancing across nodes.",
-    tags: ["Go", "Docker", "Kubernetes", "gRPC"],
-    github: "#",
-    period: "Aug 2024 - Sep 2024"
+    title: "GemiKnights ",
+    description: "Twelve hour hackathon hosted by Hack@UCF where my team of four built an interactive mock interview web app that identifies user posture, confidence, and speech patterns to provide feedback.",
+    tags: ["Node.js", "Gemini AI", "Backend"],
+    github: "https://github.com/KaziAmin110/Podium",
+    period: "Jun 2025"
   },
   {
     id: 5,
-    title: "Social Media Analytics Dashboard",
-    description: "Analytics platform that aggregates and visualizes social media metrics from multiple platforms. Features custom charts and automated reporting.",
-    tags: ["React", "D3.js", "Express", "PostgreSQL"],
-    github: "#",
-    demo: "#",
-    period: "Jun 2024 - Jul 2024"
+    title: "Depracated Portfolio Website",
+    description: "My personal portfolio website, built from scratch with HTML, CSS, JavaScript, and Flask. Showcases my projects, resume, and contact information. Deploys to my homeserver using Docker and SSH.",
+    tags: ["Flask", "Docker", "SSH", "Full Stack"],
+    gitlab: "https://gitlab.com/personal5950318/portfolio",
+    //demo: "#",
+    period: "Apr 2025 - Jun 2025"
   }
 ];
 
@@ -70,12 +71,34 @@ export function Projects() {
                   
                   <div className="flex gap-2">
                     {project.github && (
-                      <a 
+                      <a
                         href={project.github}
                         className="text-slate-600 hover:text-slate-900 transition-colors"
                         aria-label="View on GitHub"
                       >
-                        <Github className="size-5" />
+                        <svg
+                          role="img"
+                          viewBox="0 0 24 24"
+                          className="size-5 fill-current"
+                        >
+                          <path d={siGithub.path} />
+                        </svg>
+                      </a>
+                    )}
+
+                    {project.gitlab && (
+                      <a
+                        href={project.gitlab}
+                        className="text-slate-600 hover:text-slate-900 transition-colors"
+                        aria-label="View on GitLab"
+                      >
+                        <svg
+                          role="img"
+                          viewBox="0 0 24 24"
+                          className="size-5 fill-current"
+                        >
+                          <path d={siGitlab.path} />
+                        </svg>
                       </a>
                     )}
                     {project.demo && (
