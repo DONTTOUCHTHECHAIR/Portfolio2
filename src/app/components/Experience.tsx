@@ -16,20 +16,19 @@ const experiences = [
       "Refactored and optimized unnecessary code, improving performance and maintainability"
     ]
   },
-  /*{   EXAMPLES
+  {
     id: 2,
     title: "Research Assistant",
-    company: "University Machine Learning Lab",
-    location: "Remote",
+    company: "Computer Science Volunteering Organization",
+    location: "Sarasota, FL",
     period: "Jan 2025 - May 2025",
-    description: "Assisted in machine learning research focused on natural language processing and computer vision applications. Implemented and tested various neural network architectures.",
+    description: "Co-founded the CSVO, a student organization under Riverview High School that provided free computer science education to small local schools.",
     achievements: [
-      "Co-authored research paper on transformer models",
-      "Developed data preprocessing pipelines for image datasets",
-      "Achieved 92% accuracy on classification tasks"
+      "Taught classes of 10+ students on computer literacy and programming fundamentals",
+      "Worked with a team of 5 to create lesson plans and pass down the club to future volunteers"
     ]
   },
-  {
+  /*{
     id: 3,
     title: "Teaching Assistant - Data Structures",
     company: "University Computer Science Department",
