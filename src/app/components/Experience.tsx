@@ -18,10 +18,10 @@ const experiences = [
   },
   {
     id: 2,
-    title: "Research Assistant",
+    title: "Volunteer Instructor",
     company: "Computer Science Volunteering Organization",
     location: "Sarasota, FL",
-    period: "Jan 2025 - May 2025",
+    period: "Feb 2024 - Apr 2025",
     description: "Co-founded the CSVO, a student organization under Riverview High School that provided free computer science education to small local schools.",
     achievements: [
       "Taught classes of 10+ students on computer literacy and programming fundamentals",
@@ -91,7 +91,7 @@ export function Experience() {
         
         <div className="mt-12 pt-8 border-t border-slate-200">
           <a 
-            href="#" 
+            href="/resume" 
             className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
           >
             View Full Resume

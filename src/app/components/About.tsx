@@ -5,25 +5,25 @@ import { Github, Mail, Linkedin } from 'lucide-react';
 const socialLinks = [
   {
     name: 'GitLab',
-    href: '#',
+    href: 'https://gitlab.com/DONTTOUCHTHECHAIR',
     icon: Github, // Using Github icon for GitLab
-    label: 'gitlab.com/jamescarnegie'
+    label: 'gitlab.com/DONTTOUCHTHECHAIR'
   },
   {
     name: 'GitHub',
-    href: '#',
+    href: 'https://github.com/DONTTOUCHTHECHAIR',
     icon: Github,
-    label: 'github.com/jamescarnegie'
+    label: 'github.com/DONTTOUCHTHECHAIR'
   },
   {
     name: 'Email',
-    href: 'mailto:james@example.com',
+    href: 'mailto:jamescarnegie598@hotmail.com',
     icon: Mail,
-    label: 'james@example.com'
+    label: 'jamescarnegie598@hotmail.com'
   },
   {
     name: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/in/james-carnegie-9133a8345/',
     icon: Linkedin,
     label: 'linkedin.com/in/jamescarnegie'
   }

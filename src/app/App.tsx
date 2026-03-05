@@ -1,17 +1,14 @@
-import { Hero } from './components/Hero';
-import { Experience } from './components/Experience';
-import { Projects } from './components/Projects';
-import { About } from './components/About';
-import { Sidebar } from './components/Sidebar';
+import { BrowserRouter, Routes, Route } from 'react-router';
+import { Portfolio } from './components/Portfolio';
+import { Resume } from './components/Resume';
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full scroll-smooth">
-      {/* <Sidebar /> */}
-      <Hero />
-      <Experience />
-      <Projects />
-      <About />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
