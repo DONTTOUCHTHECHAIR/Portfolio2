@@ -1,6 +1,6 @@
 // tree of experiences connecting to the sidebar and resume link at the bottom
 
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Download } from 'lucide-react';
 
 const experiences = [
   {
@@ -89,13 +89,22 @@ export function Experience() {
           ))}
         </div>
         
-        <div className="mt-12 pt-8 border-t border-slate-200">
-          <a 
-            href="/resume" 
+        <div className="mt-12 pt-8 border-t border-slate-200 flex gap-4">
+          <a
+            href="/resume"
             className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
           >
-            View Full Resume
+            View Resume
             <ExternalLink className="size-4" />
+          </a>
+
+          <a
+            href="/resume.pdf"
+            download
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+          >
+            Download
+            <Download className="size-4" />
           </a>
         </div>
       </div>
